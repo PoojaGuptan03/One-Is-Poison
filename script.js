@@ -31,7 +31,7 @@ function createGame(num = currentDifficulty) {
   board.className = `game-board grid-${num}`;
   poisonIndex = Math.floor(Math.random() * num);
   gameOver = false;
-  message.textContent = "Choose your cups wisely... ☠️";
+  message.textContent = "Choose wisely... ☠️";
   message.className = "message";
 
   for (let i = 0; i < num; i++) {
@@ -60,9 +60,8 @@ function handleClick(index, element) {
     stats.currentStreak = 0;
     updateStats();
     
-    // Reveal all cups after a delay
     setTimeout(() => {
-      revealAllCups();
+      revealAllCells();
     }, 1000);
   } else {
     element.classList.add("safe");
@@ -88,7 +87,7 @@ function checkWin() {
   }
 }
 
-function revealAllCups() {
+function revealAllCells() {
   document.querySelectorAll('.cup').forEach((cup, index) => {
     if (!cup.classList.contains('safe') && !cup.classList.contains('poison')) {
       if (index == poisonIndex) {

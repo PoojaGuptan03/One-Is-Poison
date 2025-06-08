@@ -12,10 +12,10 @@
       <h2>Game Rules</h2>
       <ul class="rules-list">
         <li>☠️ One cup contains poison, others are safe</li>
-        <li>☠️ Click cups to reveal their contents</li>
-        <li>☠️ Safe cups turn green</li>
-        <li>☠️ Poison cup turns red - Game Over!</li>
-        <li>☠️ Find all safe cups to win</li>
+        <li>☠️ Click cells to see if safe or not</li>
+        <li>☠️ Safe cells turn green</li>
+        <li>☠️ Poison cell turns red - Game Over!</li>
+        <li>☠️ Find all safe cells to win</li>
         <li>☠️ Use restart to play again</li>
       </ul>
       
@@ -42,12 +42,12 @@
 
     <div class="game-section">
       <h1>One is Poison ☠️</h1>
-      <div class="message" id="message">Choose your cups wisely... ☠️</div>
+      <div class="message" id="message">Choose wisely... ☠️</div>
       
       <div class="game-controls">
-        <button class="difficulty-btn active" onclick="setDifficulty(12)">Easy (12)</button>
-        <button class="difficulty-btn" onclick="setDifficulty(16)">Medium (16)</button>
-        <button class="difficulty-btn" onclick="setDifficulty(20)">Hard (20)</button>
+        <button class="difficulty-btn active" onclick="setDifficulty(12)">12</button>
+        <button class="difficulty-btn" onclick="setDifficulty(16)">16</button>
+        <button class="difficulty-btn" onclick="setDifficulty(20)">20</button>
       </div>
 
       <div class="game-board" id="gameBoard"></div>
