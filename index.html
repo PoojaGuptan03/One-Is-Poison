@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>One is Poison ☠️</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="rules-panel">
+      <h2>Game Rules</h2>
+      <ul class="rules-list">
+        <li>☠️ One cup contains poison, others are safe</li>
+        <li>☠️ Click cups to reveal their contents</li>
+        <li>☠️ Safe cups turn green</li>
+        <li>☠️ Poison cup turns red - Game Over!</li>
+        <li>☠️ Find all safe cups to win</li>
+        <li>☠️ Use restart to play again</li>
+      </ul>
+      
+      <div class="stats">
+        <div class="stat-item">
+          <span>Games Played:</span>
+          <span id="gamesPlayed">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Games Won:</span>
+          <span id="gamesWon">0</span>
+        </div>
+        <div class="stat-item">
+          <span>Win Rate:</span>
+          <span id="winRate">0%</span>
+        </div>
+        <div class="stat-item">
+          <span>Current Streak:</span>
+          <span id="streak">0</span>
+        </div>
+        <button class="restart-btn" onclick="resetGame()">New Game</button>
+      </div>
+    </div>
+
+    <div class="game-section">
+      <h1>One is Poison ☠️</h1>
+      <div class="message" id="message">Choose your cups wisely... ☠️</div>
+      
+      <div class="game-controls">
+        <button class="difficulty-btn active" onclick="setDifficulty(12)">Easy (12)</button>
+        <button class="difficulty-btn" onclick="setDifficulty(16)">Medium (16)</button>
+        <button class="difficulty-btn" onclick="setDifficulty(20)">Hard (20)</button>
+      </div>
+
+      <div class="game-board" id="gameBoard"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
