@@ -17,10 +17,6 @@ function updateStats() {
   document.getElementById('winRate').textContent = 
     stats.gamesPlayed > 0 ? Math.round((stats.gamesWon / stats.gamesPlayed) * 100) + '%' : '0%';
   document.getElementById('streak').textContent = stats.currentStreak;
-  
-  localStorage.setItem('gamesPlayed', stats.gamesPlayed);
-  localStorage.setItem('gamesWon', stats.gamesWon);
-  localStorage.setItem('currentStreak', stats.currentStreak);
 }
 
 function setDifficulty(num) {
